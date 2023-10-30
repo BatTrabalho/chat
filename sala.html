@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sala</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div>
+      <div class="chatroom-header">
+        <div id="informacao"></div>
+        <button type="button" onclick="sairDaSala()">Sair</button>
+      </div>
+
+      <div id="lista-de-mensagens"></div>
+
+      <form onsubmit="return enviarMensagem()">
+        <input type="text" placeholder="Mensagem" id="mensagem" />
+        <button>Enviar</button>
+      </form>
+    </div>
+
+    <script src="js/compartilhado.js"></script>
+    <script src="js/sala.js"></script>
+  </body>
+</html>
