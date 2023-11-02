@@ -9,20 +9,20 @@
   <body>
     <div>
       <div>
-        <input type="text" placeholder="Nome de usuário" id="nome-de-usuario" />
+        <input type="text" placeholder="nickname" id="nickname" />
       </div>
 
       <div>
-        <input type="text" placeholder="Nome da sala" id="nome-da-sala" />
-        <button onclick="criarEEntrarNaSala()">Criar e entrar</button>
+        <input type="text" placeholder="sala" id="chatroom" />
+       <a href="./sala.html"><button class="submit" onclick="createAndEnterChatroom()">Criar e entrar</button></a>
       </div>
 
-      <div id="informacao"></div>
+      <div id="info"></div>
 
-      <ul id="lista-de-salas"></ul>
+      <ul id="chatroom-list"></ul>
     </div>
 
-    <script src="js/compartilhado.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/entrada.js"></script>
   </body>
 </html>
