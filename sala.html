@@ -8,19 +8,23 @@
   </head>
 
   <body>
-    <div>
-      <div class="chatroom-header">
-        <div id="informacao"></div>
-        <button type="button" onclick="sairDaSala()">Sair</button>
+    <div class="container">
+        
+        <button class="sair" type="button" onclick="sairDaSala()">Sair</button>
+        <div class="chatroom-header">
+          <div id="informacao"></div>
       </div>
 
-      <div id="lista-de-mensagens"></div>
+      <div id="lista-de-mensagens" class="scrollable">
+        
+      </div>
+    </div>
 
       <form onsubmit="return enviarMensagem()">
         <input type="text" placeholder="Mensagem" id="mensagem" />
-        <button>Enviar</button>
+        <button class="enviar">Enviar</button>
       </form>
-    </div>
+   
 
     <script src="js/compartilhado.js"></script>
     <script src="js/sala.js"></script>
