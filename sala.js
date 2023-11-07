@@ -5,6 +5,10 @@ const inputDeMensagem = document.getElementById('mensagem');
 const parametros = new URLSearchParams(location.search);
 const nomeDaSala = parametros.get('nomeDaSala');
 const nomeDeUsuario = parametros.get('nomeDeUsuario');
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', {
+  dateStyle: 'short',
+  timeStyle: 'short',
+});
 
 divDeInformacao.innerHTML = `Usuário: ${nomeDeUsuario}<br>Sala: ${nomeDaSala}`;
 document.title = `${nomeDeUsuario} — ${nomeDaSala}`;
@@ -23,7 +27,7 @@ function atualizarListaDeMensagens() {
         <div class="mensagem">
           <div class="conteudo">${mensagem.conteudo}</div>
           <span class="usuario">${mensagem.usuario}</span> •
-          <span class="data-de-envio">${new Date(mensagem.dataDeEnvio)}</span>
+          <span class="data-de-envio">${dateFormatter.format(mensagem.createdAt)}</span>
         </div>
       `;
     }
