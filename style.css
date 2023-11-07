@@ -77,12 +77,14 @@ form{
   max-height: 100%;
 }
 
-/* .message {
+
+
+.mensagem {
   background-color: #eee; 
   margin: 8px 0;
   padding: 12px;
   border-radius: 8px;
-} */
+}
 
 .sair {
   width: 50px;
